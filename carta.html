@@ -102,9 +102,14 @@ body::before {
 </div>
 
 <!-- 🎵 Música -->
-<audio id="music" autoplay loop>
+<audio id="music" loop>
   <source src="cancion.mp3" type="audio/mp3">
 </audio>
 
+<script>
+document.body.addEventListener("click", function() {
+  document.getElementById("music").play();
+});
+</script>
 </body>
 </html>
