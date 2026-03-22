@@ -103,15 +103,25 @@ body::before {
 
 <!-- 🎵 Música -->
 <audio id="music" loop>
-  <source src="cancion.mp3.mp3" 
-    type="audio/mp3">
+  <source src="cancion.mp3.mp3" type="audio/mp3">
 </audio>
 
+<button onclick="playMusic()" style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: #ffb6c1;
+">
+💖 Tocar música
+</button>
+
 <script>
-document.addEventListener("click", function() {
-  var music = document.getElementById("music");
-  music.play();
-});
+function playMusic() {
+  document.getElementById("music").play();
+}
 </script>
 </body>
 </html>
