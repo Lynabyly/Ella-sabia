@@ -8,7 +8,24 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f8f4f6;
+  background: linear-gradient(135deg, #ffd6e0, #d6f0ff);
+  height: 100vh;
+  overflow: hidden;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.4) 10%, transparent 10%);
+  background-size: 50px 50px;
+  animation: sparkle 10s linear infinite;
+}
+
+@keyframes sparkle {
+  from { transform: translate(0,0); }
+  to { transform: translate(-50px, -50px); }
 }
 
 .container {
@@ -70,12 +87,12 @@ body {
 
   <div class="right">
     <div class="chat-box">
-      <p><b>Tú:</b> ¿Y si aceptas mis flores? 🌸</p>
+      <p><b>Caro:</b> ¿Y si aceptas mis flores? 🌸</p>
 
       <!-- 💖 TU FOTO VA AQUÍ -->
-      <img src="https://imgur.com/a/6bbDJ9a">
+      <img src="https://imgur.com/C35BnO6">
 
-      <p><b>Ella:</b> Gracias, mi amor 💕</p>
+      <p><b>Cris:</b> Gracias, mi amor 💕</p>
     </div>
   </div>
 
