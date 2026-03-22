@@ -1,25 +1,88 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <title>Acceso secreto 💌</title>
+<meta charset="UTF-8">
+<title>Acceso secreto 💌</title>
+
+<style>
+body {
+  background: #f7f2f5;
+  font-family: Arial;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.lock {
+  font-size: 40px;
+}
+
+h2 {
+  margin: 10px 0;
+}
+
+#display {
+  font-size: 24px;
+  letter-spacing: 5px;
+  margin-bottom: 20px;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  gap: 15px;
+  justify-content: center;
+}
+
+.key {
+  background: #e7cfd6;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.key:active {
+  transform: scale(0.95);
+}
+</style>
 </head>
 
-<body style="text-align:center; margin-top:100px; font-family:sans-serif;">
+<body>
 
-<h2>Ingresa la contraseña 💖</h2>
+<div class="lock">🔒</div>
+<h2>Enter password</h2>
+<div id="display"></div>
 
-<input type="password" id="pass">
-<br><br>
-<button onclick="check()">Entrar</button>
+<div class="keypad">
+  <div class="key" onclick="press(1)">1</div>
+  <div class="key" onclick="press(2)">2</div>
+  <div class="key" onclick="press(3)">3</div>
+  <div class="key" onclick="press(4)">4</div>
+  <div class="key" onclick="press(5)">5</div>
+  <div class="key" onclick="press(6)">6</div>
+  <div class="key" onclick="press(7)">7</div>
+  <div class="key" onclick="press(8)">8</div>
+  <div class="key" onclick="press(9)">9</div>
+  <div></div>
+  <div class="key" onclick="press(0)">0</div>
+</div>
 
 <script>
-function check() {
-  var p = document.getElementById("pass").value;
+let input = "";
 
-  if (p === "2103") {
+function press(num) {
+  input += num;
+  document.getElementById("display").innerText = input;
+
+  if (input === "2410") {
     window.location.href = "carta.html";
-  } else {
+  }
+
+  if (input.length >= 4 && input !== "2103") {
     alert("Contraseña incorrecta 💔");
+    input = "";
+    document.getElementById("display").innerText = "";
   }
 }
 </script>
