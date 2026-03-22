@@ -98,10 +98,16 @@ body::before {
 </div>
 
 <div class="footer">
+ <p> Toda flor es un alma floreciendo en la naturaleza 🌷</p>
+</div>
+
+<audio id="music" loop>
+  <source src="cancion.mp3.mp3" type="audio/mp3">
+</audio>
 
   <button onclick="playMusic()" style="
   position: fixed;
-  bottom: 20px;
+  bottom: 120px;
   right: 20px;
   padding: 12px;
   border-radius: 12px;
@@ -111,13 +117,6 @@ body::before {
 💖 Tocar música
 </button>
   
- <p> Toda flor es un alma floreciendo en la naturaleza 🌷</p>
-</div>
-
-<audio id="music" loop>
-  <source src="cancion.mp3.mp3" type="audio/mp3">
-</audio>
-
 <script>
 function playMusic() {
   document.getElementById("music").play();
