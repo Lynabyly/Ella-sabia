@@ -2,84 +2,93 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>De alguien especial 💕</title>
+<title>Cristina de Caro💕</title>
 
 <style>
 body {
-  background: linear-gradient(to right, #ffd6e0, #d6f0ff);
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f8f4f6;
+}
+
+.container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  font-family: Arial;
+  justify-content: space-between;
+  padding: 40px;
 }
 
-.envelope {
-  position: relative;
-  width: 300px;
-  height: 200px;
-  background: #ff9eb5;
-  cursor: pointer;
+.left {
+  width: 40%;
 }
 
-.flap {
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-left: 150px solid transparent;
-  border-right: 150px solid transparent;
-  border-bottom: 100px solid #ff6f91;
-  top: -100px;
-  transition: 0.5s;
+.left h1 {
+  color: #ff6f91;
+  font-size: 50px;
 }
 
-.letter {
-  position: absolute;
-  width: 280px;
-  height: 180px;
+.left p {
+  color: #444;
+}
+
+.right {
+  width: 50%;
+  background: #f48ca7;
+  border-radius: 30px;
+  padding: 20px;
+}
+
+.chat-box {
   background: white;
-  top: 10px;
-  left: 10px;
-  padding: 15px;
-  box-sizing: border-box;
-  transform: translateY(100px);
-  transition: 0.5s;
-  overflow: auto;
+  border-radius: 20px;
+  padding: 10px;
 }
 
-.envelope.open .flap {
-  transform: rotateX(180deg);
+.chat-box img {
+  width: 100%;
+  border-radius: 15px;
 }
 
-.envelope.open .letter {
-  transform: translateY(-120px);
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="envelope" onclick="openLetter()">
-  <div class="flap"></div>
-  <div class="letter">
-    <h3>Cris 💖</h3>
+<div class="container">
+
+  <div class="left">
+    <h1>I NEED FLOWERS</h1>
     <p>
-      Aquí va tu carta bonita 🥺💕<br><br>
+      Para esta dinámica, solo quiero recordarte lo importante que eres para mí 💖<br><br>
       Hola loquita, la verdad no sabia si era una buena idea darte un detalle por lo mal que me caes, peero al final senti que de verdad queria hacerlo y obviamente no queria que fura algo simple jiji, asi que aqui estan tus florecitas anarillas para la loquilla de mi vida 💌
     </p>
   </div>
+
+  <div class="right">
+    <div class="chat-box">
+      <p><b>Tú:</b> ¿Y si aceptas mis flores? 🌸</p>
+
+      <!-- 💖 TU FOTO VA AQUÍ -->
+      <img src="https://imgur.com/a/6bbDJ9a">
+
+      <p><b>Ella:</b> Gracias, mi amor 💕</p>
+    </div>
+  </div>
+
 </div>
 
-<audio id="music" loop>
-  <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mp3">
-</audio>
+<div class="footer">
+  Toda flor es un alma floreciendo en la naturaleza 🌷
+</div>
 
-<script>
-function openLetter() {
-  document.querySelector(".envelope").classList.toggle("open");
-  document.getElementById("music").play();
-}
-</script>
+<!-- 🎵 Música -->
+<audio autoplay loop>
+  <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3">
+</audio>
 
 </body>
 </html>
